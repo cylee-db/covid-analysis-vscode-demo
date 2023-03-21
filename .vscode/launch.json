@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "databricks",
+            "request": "launch",
+            "name": "Run Unit Tests on Databricks",
+            "program": "${workspaceFolder}/tests",
+            "args": []
+        },
+        {
+            "type": "databricks",
+            "request": "launch",
+            "name": "Run Python file on Databricks",
+            "program": "${workspaceFolder}/src/py_covid_eda_raw.py",
+            "args": [],
+            "env": {}
+        },
+        {
+            "type": "databricks",
+            "request": "launch",
+            "name": "Run Unit Tests with pytest runner (on Databricks)",
+            "program": "${workspaceFolder}/runner/pytest_databricks.py",
+            "args": ["."],
+            "env": {}
+        },
+        {
+            "type": "databricks",
+            "request": "launch",
+            "name": "Run modular analysis Notebook on Databricks",
+            "program": "${workspaceFolder}/notebooks/covid_eda_modular.py",
+            "args": [],
+            "env": {}
+        }
+    ]
+}

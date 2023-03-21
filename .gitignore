@@ -1,0 +1,10 @@
+.dbx
+.databricks/
+.pytest_cache/
+.venv
+**/__pycache__/
+dist/
+build/
+covid_analysis.egg-info/
+typings/
+.DS_Store
