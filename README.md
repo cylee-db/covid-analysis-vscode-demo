@@ -1,20 +1,28 @@
-# Software engineering best practices for Databricks notebooks
+# COVID analysis - Demo of the Databaricks VSCode Extension
 
-This repository is a companion for the example article "Software engineering best practices for Databricks notebooks" ([AWS](https://docs.databricks.com/notebooks/best-practices.html) | [Azure](https://docs.microsoft.com/azure/databricks/notebooks/best-practices) | [GCP](https://docs.gcp.databricks.com/notebooks/best-practices.html)).
+To use this demo:
 
-Going through the example, you will:
+- Clone this repository to your laptop's development environment
+- Import the root folder into an empty VSCode workspace
+- Install the Databricks VSCode Extension
+- Configure the extension for use with your Databricks workspace
+- Run notebooks in `notebooks` using "Run File as Workflow on Databricks"
+- Run python files in `src` using "Run File on Databricks"
+- Leverage the unit tests already created in the project
+- Leverage the VSCode Launch Configurations already created for you in `.vscode/launch.json`
 
-* Add notebooks to Databricks Repos for version control.
-* Extracts portions of code from one of the notebooks into a shareable component.
-* Test the shared code.
-* Automatically run notebooks in git on a schedule using a Databricks job.
-* Optionally, apply CI/CD to the notebooks and the shared code.
-
-The example is hands-on. We recommend working it step-by-step to learn how to apply these techniques to your own Databricks notebooks.
 
 
-## Notes on setting up project in VSCode
+## Notes on setting up and running the project in VSCode
 
-* Create `settings.json` to eanable pytest in the VSCode folder
+* Create `settings.json` to eanable pytest in the VSCode folder (This is already done for you)
 * Running Databricks Notebooks on Databricks (Notebooks have a header) - Use "Run File as Workflow on Databricks"
 * Running Python files on Databricks - Use "Run File as Databricks"
+
+
+# Credits
+
+This repository is a combination of the assets found in:
+- https://github.com/databricks/notebook-best-practices
+  - This is a companion for the example article "Software engineering best practices for Databricks notebooks" ([AWS](https://docs.databricks.com/notebooks/best-practices.html) | [Azure](https://docs.microsoft.com/azure/databricks/notebooks/best-practices) | [GCP](https://docs.gcp.databricks.com/notebooks/best-practices.html)).
+- https://github.com/databricks/ide-best-practices
