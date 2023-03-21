@@ -1,4 +1,4 @@
-# COVID analysis - Demo of the Databaricks VSCode Extension
+# COVID analysis - Demo of the Databricks VSCode Extension
 
 To use this demo:
 
