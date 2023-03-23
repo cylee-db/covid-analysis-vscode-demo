@@ -24,16 +24,16 @@
             "request": "launch",
             "name": "Run Unit Tests with pytest runner (on Databricks)",
             "program": "${workspaceFolder}/runner/pytest_databricks.py",
-            "args": ["."],
+            "args": ["../tests/."],
             "env": {}
         },
         {
-            "type": "databricks",
+            "type": "databricks-workflow",
             "request": "launch",
             "name": "Run modular analysis Notebook on Databricks",
             "program": "${workspaceFolder}/notebooks/covid_eda_modular.py",
-            "args": [],
-            "env": {}
+            "parameters": {},
+            "args": []
         }
     ]
 }
