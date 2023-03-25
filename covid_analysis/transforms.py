@@ -3,7 +3,7 @@ import pandas as pd
 
 # Filter by country code.
 def filter_country(pdf, country="USA"):
-    pdf = pdf[pdf.iso_code == country]
+    pdf = pdf[pdf.iso_code != country]
     return pdf
 
 
