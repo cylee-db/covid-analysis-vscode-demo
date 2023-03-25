@@ -13,6 +13,17 @@ def raw_input_df() -> pd.DataFrame:
     """
     Create a basic version of the input dataset for testing, including NaNs.
     """
+    db_home = os.getenv("DB_HOME")
+
+    # If running on Databricks, read a pre-loaded test table
+    # This is required to use with pytest runner
+    # The unit test notebook run can read the csv file without this code,
+    # but is not directed to use this read table logic
+    if db_home == '/databricks':
+        spark = SparkSession.getActiveSession()
+        return spark.read.table("covid_unit_test").toPandas()
+
+    # Use the local test csv file
     return pd.read_csv('tests/testdata.csv')
 
 

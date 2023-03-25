@@ -5,10 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "databricks",
+            "type": "databricks-workflow",
             "request": "launch",
-            "name": "Run Unit Tests on Databricks",
-            "program": "${workspaceFolder}/tests",
+            "name": "Run raw analysis Notebook on Databricks",
+            "program": "${workspaceFolder}/notebooks/covid_eda_raw.py",
+            "parameters": {},
+            "args": []
+        },
+        {
+            "type": "databricks-workflow",
+            "request": "launch",
+            "name": "Run Unit Tests Notebook on Databricks",
+            "program": "${workspaceFolder}/notebooks/run_unit_tests.py",
+            "args": []
+        },
+        {
+            "type": "databricks-workflow",
+            "request": "launch",
+            "name": "Run modular analysis Notebook on Databricks",
+            "program": "${workspaceFolder}/notebooks/covid_eda_modular.py",
+            "parameters": {},
             "args": []
         },
         {
@@ -26,14 +42,6 @@
             "program": "${workspaceFolder}/runner/pytest_databricks.py",
             "args": ["../tests/."],
             "env": {}
-        },
-        {
-            "type": "databricks-workflow",
-            "request": "launch",
-            "name": "Run modular analysis Notebook on Databricks",
-            "program": "${workspaceFolder}/notebooks/covid_eda_modular.py",
-            "parameters": {},
-            "args": []
         }
     ]
 }
